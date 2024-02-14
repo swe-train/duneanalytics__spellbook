@@ -17,7 +17,7 @@
 {{
     transfers_enrich(
         base_transfers = ref('tokens_base_transfers')
-        , tokens_erc20_model = ref('tokens_erc20')
+        , tokens_erc20_model = source('tokens', 'erc20')
         , prices_model = source('prices', 'usd')
         , evms_info_model = ref('evms_info')
     )
