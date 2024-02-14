@@ -1,7 +1,8 @@
 {{config(
+    tags = ['prod_exclude'],
     schema = 'tokens',
     alias = 'base_transfers',
-    partition_by = ['blockchain', 'token_standard', 'block_date'],
+    partition_by = ['blockchain', 'block_date'],
     materialized = 'incremental',
     file_format = 'delta',
     incremental_strategy = 'merge',
@@ -11,9 +12,8 @@
 }}
 
 /*
-    --short term, to get prod running, omit bnb/polygon, add later
+    --short term, to get prod running, omit bnb due to cluster crashing, add later
     , ref('tokens_bnb_base_transfers')
-    , ref('tokens_polygon_base_transfers')
 */
 
 {% set models = [
@@ -27,6 +27,7 @@
     , ref('tokens_optimism_base_transfers')
     , ref('tokens_zksync_base_transfers')
     , ref('tokens_zora_base_transfers')
+    , ref('tokens_polygon_base_transfers')
 ] %}
 
 with base_union as (

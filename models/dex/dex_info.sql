@@ -67,7 +67,7 @@ FROM (VALUES
     , ('saddle', 'Saddle', 'Direct', 'saddlefinance')
     , ('oneinch', '1inch', 'Aggregator', '1inch')
     , ('1inch', '1inch', 'Aggregator', '1inch') -- To Fix, should be just oneinch
-    , ('1inch Limit Order Protocol', '1inch Limit Order Protocol', 'Aggregator', '1inch') -- To Fix, should be just oneinch or maybe oneinch_limit_order_protocol
+    , ('1inch LOP', '1inch Limit Order Protocol', 'Aggregator', '1inch') -- To Fix, should be just oneinch or maybe oneinch_limit_order_protocol
     , ('zeroex', '0x', 'Aggregator', '0xProject')
     , ('0x API', '0x API', 'Aggregator', '0xProject') -- To Fix, should be just zeroex
     , ('paraswap', 'ParaSwap', 'Aggregator', 'paraswap')
@@ -92,8 +92,8 @@ FROM (VALUES
     , ('mummy_finance', 'Mummy Finance', 'Direct', 'mummyftm')
     , ('carbonhood', 'Carbonhood', 'Direct', 'carbonhood')
     , ('immortalx', 'ImmortalX', 'Perpetual', 'immortalx')
+    , ('chainhop', 'ChainHop', 'Direct', 'ChainHopDEX')
     , ('dackieswap', 'DackieSwap', 'Direct', 'DackieSwap')
-    , ('smardex', 'SmarDex', 'Direct', 'SmarDex')
     , ('wardenswap', 'Warden', 'Direct & Aggregator', 'WardenSwap')
     , ('chronos', 'Chronos', 'Direct', 'ChronosFi_')
     , ('zyberswap', 'Zyberswap', 'Direct', 'zyberswap')
@@ -102,6 +102,9 @@ FROM (VALUES
     , ('ramses', 'Ramses', 'Direct', 'ramses')
     , ('scale', 'Scale', 'Direct', 'scale')
     , ('baseswap', 'Baseswap', 'Direct', 'Baseswap')
+    , ('oasisswap', 'OasisSwap', 'Direct', 'OasisSwapDEX')
+    , ('smardex', 'SmarDex', 'Direct', 'SmarDex')
+    , ('swaap', 'Swaap', 'Direct', 'SwaapFinance')
     , ('odos', 'Odos', 'Aggregator', 'odosprotocol')
     , ('whirlpool', 'Orca', 'Direct', 'orca_so')
     , ('phoenix', 'Phoenix', 'Direct', 'PhoenixTrade')
@@ -109,5 +112,12 @@ FROM (VALUES
     , ('meteora', 'Meteora', 'Direct', 'MeteoraAG')
     , ('lifinity', 'Lifinity', 'Direct', 'Lifinity_io')
     , ('goosefx_ssl', 'GooseFX', 'Direct', 'GooseFX1')
+    , ('velocimeter', 'Velocimeter', 'Direct', 'Velocimeter')
     , ('dooar', 'Dooar', 'Direct', 'dooar')
+    , ('gridex', 'Gridex', 'Direct', 'GridexProtocol')
+    , ('plantbaseswap','Plantbaseswap','Direct','PlantBaseSwap')
+    , ('sobal','Sobal','Direct','Sobal')
+    , ('derpdex','DerpDex', 'Direct', 'DerpDex')
+    , ('torus', 'Torus', 'Direct', 'torus_farm')
+    , ('solidly','Solidly','Direct','Solidly')
     ) AS temp_table (project, name, marketplace_type, x_username)
